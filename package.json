@@ -1,0 +1,45 @@
+{
+  "name": "@sharedcode-team/dotnet-appframework",
+  "version": "0.0.1-Build.0",
+  "description": "A .NET-based application development framework shared with everyone.",
+  "scripts": {
+    "release:patch-dryrun": "standard-version -r patch -i CHANGELOG.md --dry-run",
+    "release:patch": "standard-version -r patch -i CHANGELOG.md",
+    "release:minor-dryrun": "standard-version -r minor -i CHANGELOG.md --dry-run",
+    "release:minor": "standard-version -r minor -i CHANGELOG.md",
+    "release:major-dryrun": "standard-version -r major -i CHANGELOG.md --dry-run",
+    "release:major": "standard-version -r major -i CHANGELOG.md",
+    "pre-release:patch-dryrun": "standard-version -r patch -p Build -i CHANGELOG.md --dry-run",
+    "pre-release:patch": "standard-version -r patch -p Build -i CHANGELOG.md",
+    "pre-release:minor-dryrun": "standard-version -r minor -p Build -i CHANGELOG.md --dry-run",
+    "pre-release:minor": "standard-version -r minor -p Build -i CHANGELOG.md",
+    "pre-release:major-dryrun": "standard-version -r major -p Build -i CHANGELOG.md --dry-run",
+    "pre-release:major": "standard-version -r major -p Build -i CHANGELOG.md",
+    "dotnet:release": "dotnet tool restore && dotnet tool run nbgv prepare-release --project ./src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharedcode-team/dotnet-af.git"
+  },
+  "keywords": [
+    "sharedcode-team",
+    "application-framework",
+    "dotnet",
+    "dotnet-core",
+    "dotnet-framework",
+    "dotnet-standard"
+  ],
+  "author": "Yucai Wang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sharedcode-team/dotnet-af/issues"
+  },
+  "homepage": "https://github.com/sharedcode-team/dotnet-af#readme",
+  "volta": {
+    "node": "22.11.0",
+    "pnpm": "9.14.2"
+  },
+  "devDependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
